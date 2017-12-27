@@ -1,0 +1,3 @@
+#!/bin/bash
+scp -p gerrit.iiot.io:hooks/commit-msg .git/hooks/
+git config remote.origin.push refs/heads/*:refs/for/*

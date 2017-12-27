@@ -1,0 +1,5 @@
+#!/bin/bash
+FOL="${PWD##*/}"
+git remote add gerrit ssh://gerrit.iiot.io/$FOL.git
+scp -p gerrit.iiot.io:hooks/commit-msg .git/hooks/
+git config remote.gerrit.push refs/heads/*:refs/for/*
